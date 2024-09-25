@@ -1,0 +1,11 @@
+<div class="card">
+  <div class="card-image">
+    <img [src]="ProductInput.imageUrl" [alt]="ProductInput.name" />
+  </div>
+  <div class="card-info">
+    <p class="product-name">{{ ProductInput.name }}</p>
+    <p class="price">Price: {{ ProductInput.price }}</p>
+    <div class="cart" (click)="addToCart(ProductInput)">Add To Cart</div>
+  </div>
+  <div class="quick-look" (click)="routeToProductDetails()">Details</div>
+</div>

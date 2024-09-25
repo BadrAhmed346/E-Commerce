@@ -1,0 +1,36 @@
+.products-bestseller {
+  display: flex;
+  flex-direction: column; /* Stack the banner above the container */
+  padding: 20px;
+}
+
+.best-seller-banner {
+  background-color: #f1ecc0; /* Gold color to highlight */
+  color: #fff; /* White text */
+  font-size: 60px; /* Large text */
+  font-weight: bold; /* Bold text */
+  text-align: center; /* Center text horizontally */
+  padding: 40px 0; /* Padding to make it look wider and more spacious */
+  width: 100%; /* Full width of the container */
+  position: relative;
+  z-index: 1000; /* Make sure it's on top */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add some shadow for depth */
+}
+
+.container {
+  display: flex; /* Make the container a flexbox */
+  width: 100%; /* Full width of the container */
+  padding-top: 30px;
+}
+
+.filter {
+  flex: 0 0 10%; /* Set filter to take up 20% of the width */
+  margin-right: 20px; /* Optional: add some space between filter and products */
+}
+
+.products {
+  flex: 1; /* Set products to take the remaining space */
+  display: flex; /* Allow product cards to be in a row */
+  flex-wrap: wrap; /* Allow product cards to wrap to the next line */
+  gap: 20px; /* Space between product cards */
+}

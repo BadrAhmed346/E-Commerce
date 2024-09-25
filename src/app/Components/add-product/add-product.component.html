@@ -1,0 +1,109 @@
+<div class="add-product-container">
+  <h2>{{ product.id ? "Edit Product" : "Add Product" }}</h2>
+  <form (ngSubmit)="saveProduct()">
+    <!-- Name -->
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input id="name" [(ngModel)]="product.name" name="name" required />
+    </div>
+
+    <!-- Quantity -->
+    <div class="form-group">
+      <label for="quantity">Quantity:</label>
+      <input
+        id="quantity"
+        type="number"
+        [(ngModel)]="product.quantity"
+        name="quantity"
+        min="0"
+        required
+      />
+    </div>
+
+    <!-- Price -->
+    <div class="form-group">
+      <label for="price">Price:</label>
+      <input
+        id="price"
+        type="number"
+        [(ngModel)]="product.price"
+        name="price"
+        min="0"
+        required
+      />
+    </div>
+
+    <!-- Description -->
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <textarea
+        id="description"
+        [(ngModel)]="product.description"
+        name="description"
+        rows="4"
+      ></textarea>
+    </div>
+
+    <!-- Image with Browse Button -->
+    <div class="form-group">
+      <label for="imageUrl">Product Image:</label>
+      <img
+        *ngIf="product?.imageUrl"
+        [src]="product.imageUrl"
+        alt="Product Image"
+        class="product-image"
+      />
+      <input type="file" (change)="uploadImage($event)" />
+    </div>
+
+    <!-- Category and Brand on Same Line -->
+    <div class="form-group inline-group">
+      <div>
+        <label for="category">Category:</label>
+        <select id="category" [(ngModel)]="product.category" name="category">
+          <option *ngFor="let category of categories" [value]="category">
+            {{ category }}
+          </option>
+        </select>
+      </div>
+      <div>
+        <label for="brand">Brand:</label>
+        <select id="brand" [(ngModel)]="product.brand" name="brand">
+          <option *ngFor="let brand of brands" [value]="brand">
+            {{ brand }}
+          </option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Rating -->
+    <div class="form-group">
+      <label for="rating">Rating:</label>
+      <input
+        id="rating"
+        type="number"
+        [(ngModel)]="product.rating"
+        name="rating"
+        min="0"
+        max="5"
+        step="0.1"
+      />
+    </div>
+
+    <!-- Best Seller -->
+    <div class="form-group checkbox-container">
+      <input
+        type="checkbox"
+        [(ngModel)]="product.bestSeller"
+        name="bestSeller"
+        id="bestSeller"
+      />
+      <label for="bestSeller" class="best-seller-label">Best Seller</label>
+    </div>
+
+    <!-- Dynamic Button -->
+    <button type="submit">
+      {{ product.id ? "Update Product" : "Add Product" }}
+    </button>
+  </form>
+</div>

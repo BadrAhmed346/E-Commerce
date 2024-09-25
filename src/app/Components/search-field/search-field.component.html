@@ -1,0 +1,16 @@
+<div class="search-box">
+  <!-- navbar.component.html -->
+  <input
+    type="text"
+    [(ngModel)]="searchText"
+    (ngModelChange)="onSearchChange($event)"
+    placeholder="Search..."
+  />
+
+  <!-- <input
+    type="text"
+    placeholder="Search for products..."
+    [(ngModel)]="searchQuery"
+  />
+  <button (click)="onSearch()">Search</button> -->
+</div>

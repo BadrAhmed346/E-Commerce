@@ -1,0 +1,17 @@
+<div class="products-bestseller">
+  <div class="best-seller-banner">Best Seller</div>
+  <div class="container">
+    <div class="filter">
+      <app-filter
+        (filterChange)="onFilterChange($event)"
+        [showCategories]="true"
+      ></app-filter>
+    </div>
+    <div class="products">
+      <app-best-seller-card
+        *ngFor="let product of filteredProducts"
+        [ProductInput]="product"
+      ></app-best-seller-card>
+    </div>
+  </div>
+</div>

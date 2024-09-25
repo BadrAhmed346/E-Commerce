@@ -1,0 +1,22 @@
+.products-bestseller {
+  display: flex;
+  flex-direction: column; /* Stack the banner above the container */
+  padding: 20px;
+}
+.container {
+  display: flex; /* Make the container a flexbox */
+  width: 100%; /* Full width of the container */
+  padding-top: 30px;
+}
+
+.filter {
+  flex: 0 0 10%; /* Set filter to take up 20% of the width */
+  margin-right: 20px; /* Optional: add some space between filter and products */
+}
+
+.mobiles {
+  flex: 1; /* Set products to take the remaining space */
+  display: flex; /* Allow product cards to be in a row */
+  flex-wrap: wrap; /* Allow product cards to wrap to the next line */
+  gap: 20px; /* Space between product cards */
+}

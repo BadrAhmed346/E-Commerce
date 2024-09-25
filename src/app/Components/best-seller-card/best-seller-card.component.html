@@ -1,0 +1,14 @@
+<div class="best-seller-card">
+  <img
+    [src]="ProductInput.imageUrl"
+    [alt]="ProductInput.name"
+    class="product-image"
+  />
+  <div class="product-info">
+    <h2 class="product-name">{{ ProductInput.name }}</h2>
+    <p class="product-price">Price: {{ ProductInput.price }}</p>
+  </div>
+  <button class="details-btn" (click)="routeToProductDetails()">
+    View Details
+  </button>
+</div>

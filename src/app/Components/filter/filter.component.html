@@ -1,0 +1,23 @@
+<div>
+  <h3 *ngIf="showCategories">Category</h3>
+  <ng-container *ngIf="showCategories"
+    ><div *ngFor="let category of categories">
+      <input
+        type="checkbox"
+        [checked]="selectedCategories.includes(category)"
+        (change)="toggleCategory(category)"
+      />
+      {{ category }}
+    </div></ng-container
+  >
+
+  <h3>Brand</h3>
+  <div *ngFor="let brand of brands">
+    <input
+      type="checkbox"
+      [checked]="selectedBrands.includes(brand)"
+      (change)="toggleBrand(brand)"
+    />
+    {{ brand }}
+  </div>
+</div>

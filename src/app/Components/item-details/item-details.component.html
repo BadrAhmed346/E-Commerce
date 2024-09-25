@@ -1,0 +1,56 @@
+<!-- item-details.component.html -->
+<div class="laptop-card">
+  <div class="laptop-image">
+    <img [src]="item.imageUrl" [alt]="item.name" />
+  </div>
+  <div class="laptop-info">
+    <table>
+      <tr>
+        <th>Laptop Name</th>
+        <td>{{ item.name }}</td>
+      </tr>
+      <tr>
+        <th>Price</th>
+        <td>{{ item.price | currency }}</td>
+      </tr>
+      <tr>
+        <th>Description</th>
+        <td>{{ item.description }}</td>
+      </tr>
+      <tr>
+        <th>Available Quantity</th>
+        <td>{{ item.quantity }}</td>
+      </tr>
+      <tr>
+        <th>Category</th>
+        <td>{{ item.category }}</td>
+      </tr>
+      <tr>
+        <th>Brand</th>
+        <td>{{ item.brand }}</td>
+      </tr>
+      <tr>
+        <th>Rate</th>
+        <td>{{ item.rating }}</td>
+      </tr>
+    </table>
+    <div>
+      <label for="quantity">Select Quantity:</label>
+      <input
+        type="number"
+        id="quantity"
+        [(ngModel)]="selectedQuantity"
+        (ngModelChange)="onQuantityChange()"
+        min="1"
+        [max]="item.quantity - cartItemQuantity"
+      />
+    </div>
+    <button
+      class="add-to-cart"
+      (click)="addToCart()"
+      [disabled]="!isAddToCartEnabled()"
+    >
+      Add to Cart
+    </button>
+  </div>
+</div>

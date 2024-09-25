@@ -1,0 +1,16 @@
+/* cart/cart.component.css */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+img {
+  border-radius: 5px;
+}

@@ -1,0 +1,28 @@
+<div class="centered-boxes">
+  <!-- Navigation Links -->
+  <div class="box"><a routerLink="/home">Home</a></div>
+  <div class="box"><a routerLink="/products">Shop Now</a></div>
+  <div class="box" *ngIf="!authService.isLoggedIn()">
+    <a routerLink="/login-register">Register/Login</a>
+  </div>
+  <div class="box" *ngIf="authService.isAdmin()">
+    <a routerLink="/admin">Admin</a>
+  </div>
+  <div
+    class="box"
+    *ngIf="authService.isLoggedIn()"
+    (click)="authService.logout()"
+  >
+    <a routerLink="/home">Logout</a>
+  </div>
+  <div class="box" *ngIf="!authService.isAdmin()">
+    <a routerLink="/cart">Cart</a>
+  </div>
+
+  <!-- Search Bar -->
+  <div class="box">
+    <app-search-field></app-search-field>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

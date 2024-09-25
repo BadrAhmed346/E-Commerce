@@ -1,0 +1,27 @@
+.slider-container {
+  width: 98%; /* Set to 80% of the page width */
+  overflow: hidden; /* Hide images outside the visible area */
+  margin: auto;
+  position: relative;
+  background-color: rgb(218, 211, 211); /* Red background */
+  border: 2px solid #333; /* Solid border */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+  padding: 10px; /* Optional padding */
+}
+
+.slider {
+  display: flex; /* Display items in a row */
+  transition: transform 0.5s ease-in-out; /* Smooth transition */
+}
+
+.slider-item {
+  min-width: 200px; /* Set width for each image */
+  padding: 10px;
+}
+
+.slider-item img {
+  width: 100%; /* Make images responsive */
+  height: auto;
+  border-radius: 10px; /* Optional: Add rounded corners */
+}

@@ -1,0 +1,27 @@
+<div class="home-container">
+  <div class="main-content">
+    <app-ads></app-ads>
+    <app-best-seller-slider [products]="products"></app-best-seller-slider>
+  </div>
+  <!-- Product Section -->
+  <div class="product-section">
+    <h3>Laptops</h3>
+    <div class="product-grid">
+      <div class="product-card" *ngFor="let laptop of laptops">
+        <img [src]="laptop.imageUrl" alt="{{ laptop.name }}" />
+        <h4>{{ laptop.name }}</h4>
+        <p>{{ laptop.price | currency : "EGP" }}</p>
+      </div>
+    </div>
+
+    <h3>Mobiles</h3>
+    <div class="product-grid">
+      <div class="product-card" *ngFor="let mobile of mobiles">
+        <img [src]="mobile.imageUrl" alt="{{ mobile.name }}" />
+        <h4>{{ mobile.name }}</h4>
+        <p>{{ mobile.price | currency : "EGP" }}</p>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>

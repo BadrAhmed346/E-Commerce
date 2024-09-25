@@ -1,0 +1,52 @@
+.main-content {
+  flex: 1; /* Allow the main content to take up remaining space */
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 0; /* Adjust padding as needed */
+  background-color: #f1f1f1; /* Light background color */
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+footer .rights {
+  width: 100%;
+  background-color: #d6d1d1; /* Slightly darker background */
+  margin: 0; /* Remove any margin */
+  padding: 5px 0; /* Remove padding if not needed */
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0px;
+}
+
+.social-icon {
+  width: 40px; /* Increased size for better visibility */
+  height: 40px;
+  margin: 0 10px;
+  transition: transform 0.3s; /* Smooth scaling effect */
+}
+
+.social-icon:hover {
+  transform: scale(1.1); /* Scale effect on hover */
+}
+
+footer p {
+  text-align: center;
+  margin: 0; /* Remove margin */
+  color: #333; /* Darker text for better contrast */
+}
+
+footer a {
+  text-decoration: none;
+  border-radius: 2px;
+  padding: 5px;
+}
+
+footer div a:hover {
+  background-color: #d6d1d1; /* Background color on hover */
+}

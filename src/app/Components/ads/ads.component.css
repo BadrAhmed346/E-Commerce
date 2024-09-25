@@ -1,0 +1,10 @@
+.background-box {
+  width: 50%; /* Set to 100% of parent or adjust as needed */
+  height: 300px; /* Adjust height as needed */
+  background-size: cover; /* Ensure the image covers the entire box */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Avoid repeating the background image */
+  border-radius: 10px; /* Optional: Rounded corners */
+  /* border: 2px solid #333; Optional:  */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);  */
+}

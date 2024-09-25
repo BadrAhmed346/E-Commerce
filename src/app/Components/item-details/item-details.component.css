@@ -1,0 +1,67 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.laptop-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 600px;
+  display: flex;
+}
+
+.laptop-image img {
+  width: 300px;
+  height: auto;
+}
+
+.laptop-info {
+  padding: 20px;
+  flex: 1;
+}
+
+.laptop-info table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.laptop-info th,
+.laptop-info td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.laptop-info th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.add-to-cart {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background-color: #218838;
+}
+
+input[type="number"] {
+  width: 60px;
+  margin-left: 10px;
+  padding: 5px;
+}
